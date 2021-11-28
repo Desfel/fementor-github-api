@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
     <div class="main-wrapper">
       <router-view />
     </div>
@@ -20,13 +19,12 @@
   </div>
 </template>
 <script>
-import NavBar from '@/components/NavBar'
 import NewContentAvailableToastr from '@/components/NewContentAvailableToastr'
 import AppleAddToHomeScreenModal from '@/components/AppleAddToHomeScreenModal'
 import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
-  components: { NavBar, NewContentAvailableToastr, AppleAddToHomeScreenModal },
+  components: { NewContentAvailableToastr, AppleAddToHomeScreenModal },
   computed: {
     ...mapGetters('app', ['newContentAvailable']),
     ...mapState('app', ['showAddToHomeScreenModalForApple', 'refreshingApp'])
@@ -39,11 +37,45 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/theme/variables.scss';
 body {
   margin: 0;
 
+  * {
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  a,
+  span {
+    margin: 0;
+    font-family: $textFont;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 39px;
+    color: var(--titleColor);
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--titleColor);
+  }
+
   a {
-    font-weight: 500;
     text-decoration: none;
   }
 
@@ -74,16 +106,11 @@ body {
     }
 
     .main-wrapper {
-      margin-top: 3.6rem;
-      padding: 20px;
-
       .page-wrapper {
-        width: 60%;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
         margin: auto;
-
-        @media screen and (max-width: 1000px) {
-          width: 100%;
-        }
       }
     }
   }

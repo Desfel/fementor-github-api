@@ -9,3 +9,25 @@ $navbar-height: 3.6rem;
 $navbar-color: #fff;
 $navbar-offline-color: #333;
 $navbar-link-color: #2c3e50;
+
+$primaryColor1: #0079FF;
+$primaryColor2: #F74646;
+
+:root {
+  --bgColor: #F6F8FF;
+  --bgContainer: #FEFEFE;
+  --bgInfo: #F6F8FF;
+  --titleColor: #2B3442;
+  --textColor: #4B6A9B;
+}
+
+.theme-dark {
+  --bgColor: #141D2F;
+  --bgContainer: #1E2A47;
+  --bgInfo: #141D2F;
+  --titleColor: #fff;
+  --textColor: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+$textFont: 'Space Mono', monospace;
