@@ -103,7 +103,7 @@ export default {
     return {
       isDark: false,
       userInfo: {
-        avatar_url: './img/octocat.png',
+        avatar_url: '../img/octocat.png',
         name: 'The Octocat',
         login: 'octocat',
         created_at: '25 Jan 2011',
